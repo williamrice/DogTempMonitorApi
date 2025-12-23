@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace TempMonitor.Models;
 
 public class WeatherReading
@@ -32,6 +34,7 @@ public class WeatherReading
     // When this weather data was queried
     public DateTime Timestamp { get; set; } = DateTime.UtcNow;
 
-    // Navigation property
+    // Navigation property - ignore to prevent circular reference in JSON
+    [JsonIgnore]
     public TemperatureReading TemperatureReading { get; set; } = null!;
 }
