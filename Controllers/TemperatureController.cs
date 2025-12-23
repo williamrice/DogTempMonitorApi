@@ -36,6 +36,7 @@ public class TemperatureController(
 			[FromQuery] DateTime end)
 	{
 		var readings = await context.TemperatureReadings
+				.Include(r => r.WeatherReading)
 				.Where(r => r.Timestamp >= start && r.Timestamp <= end)
 				.OrderByDescending(r => r.Timestamp)
 				.ToListAsync();
