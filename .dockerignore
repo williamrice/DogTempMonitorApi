@@ -1,0 +1,34 @@
+# Ignore git files
+.git
+.gitignore
+.gitattributes
+
+# Ignore build artifacts
+bin/
+obj/
+out/
+
+# Ignore IDE files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore development settings
+appsettings.Development.json
+
+# Ignore documentation
+*.md
+!DEPLOYMENT.md
+
+# Ignore test files
+**/*Tests/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
